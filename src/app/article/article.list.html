@@ -15,8 +15,12 @@
             <td>{{item.updatedAt|date}}</td>
             <td>{{item.slug}}</td>
             <td>
-                <a ui-sref="^.view({id: item.id})">View</a>
-                <a href="" ng-click="articles.remove($index)">Remove</a>
+                <a ui-sref="^.view({id: item.id})">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+                <a href="" ng-click="articles.remove($index)">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a>
             </td>
         </tr>
     </table>
