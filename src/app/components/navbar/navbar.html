@@ -15,11 +15,11 @@
 
         <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true" id="navbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a ui-sref="home()">Home</a></li>
+                <li ng-class="{ active: (menuActive == 'home') }" ng-click="menuActive = 'home'"><a ui-sref="home()">Home</a></li>
                 <li><a ng-href="#">About</a></li>
                 <li><a ng-href="#">Contact</a></li>
-                <li><a ng-href="#/articles">Articles</a></li>
-                <li><a ng-href="#/css-test">Css Test</a></li>
+                <li ng-class="{ active: (menuActive == 'articles') }" ng-click="menuActive = 'articles'"><a ng-href="#/articles">Articles</a></li>
+                <li ng-class="{ active: (menuActive == 'css-test') }" ng-click="menuActive = 'css-test'"><a ng-href="#/css-test">Css Test</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right acme-navbar-text">
